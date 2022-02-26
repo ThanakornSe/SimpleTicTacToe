@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.example.simpletictactoe.ui.fragment.TitleFragment"
+        android:label="Title"
+        tools:layout="@layout/fragment_title" >
+        <action
+            android:id="@+id/action_titleFragment_to_playerFragment"
+            app:destination="@id/playerFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerFragment"
+        android:name="com.example.simpletictactoe.ui.fragment.PlayerFragment"
+        android:label="PlayerName"
+        tools:layout="@layout/fragment_player">
+        <action
+            android:id="@+id/action_playerFragment_to_ticTacToeFragment"
+            app:destination="@id/ticTacToeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ticTacToeFragment"
+        android:name="com.example.simpletictactoe.ui.fragment.TicTacToeFragment"
+        android:label="TicTacToe"
+        tools:layout="@layout/fragment_tic_tac_toe" >
+        <argument
+            android:name="PlayerName"
+            app:argType="string[]" />
+        <action
+            android:id="@+id/action_ticTacToeFragment_to_titleFragment"
+            app:destination="@id/titleFragment"
+            app:popUpTo="@id/titleFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="boardSize"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.simpletictactoe.ui.fragment.HistoryFragment"
+        android:label="้History"
+        tools:layout="@layout/fragment_history" />
+</navigation>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D7CCC8"
+    tools:context=".ui.fragment.TicTacToeFragment">
+
+
+    <Button
+        android:id="@+id/btn_playAgain"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_buttton"
+        android:text="@string/play_again"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_home"
+        app:layout_constraintEnd_toStartOf="@+id/btn_home"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_home"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_home"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/red_button"
+        android:text="@string/home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_playAgain" />
+
+    <TextView
+        android:id="@+id/txt_player_turn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/player_turn"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.simpletictactoe.ui.TicTacToeBoard
+        android:id="@+id/ticTacToeBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btn_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_player_turn"
+        custom:boardColor="#000000"
+        custom:XColor="@color/red"
+        custom:OColor="@color/blue"
+        custom:WonLineColor="@color/green"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

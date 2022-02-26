@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">SimpleTicTacToe</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_history">Game History</string>
+    <string name="no_data_available">NO DATA AVAILABLE</string>
+    <string name="clear_history">Clear history</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="player_1">Player 1</string>
+    <string name="player_2">Player 2</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="boardsize">BoardSize</string>
+    <string name="enter_no_between_1_9">Enter No. between 1-9</string>
+    <string name="start">Start</string>
+    <string name="play_again">Play Again</string>
+    <string name="home">Home</string>
+    <string name="player_turn">Player Turn</string>
+    <string name="tic_tac_toe">Tic Tac Toe</string>
+    <string name="play">Play</string>
+    <string name="history">History</string>
+    <string name="player_1_x">Player 1 (X):</string>
+    <string name="player_2_o">Player 2 (O):</string>
+    <string name="player_won">Player Won!!!</string>
+    <string name="date">date</string>
+    <string name="boardsize_history">BoardSize:</string>
+</resources>
